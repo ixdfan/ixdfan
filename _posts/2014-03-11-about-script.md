@@ -1,7 +1,7 @@
 ---
 layout: post
-title: `<script>`标记那些事儿
-modified: 2013-05-31
+title: < script> 标记那些事儿
+modified: 2014-03-12
 category: articles
 tags: [something about script]
 comments: true
