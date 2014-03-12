@@ -36,7 +36,7 @@ links:
     url: 
   - title: Articles
     url: /articles/
- - title: About
+  - title: About
     url: /about/
     external: true
 	
