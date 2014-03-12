@@ -28,14 +28,14 @@ share: true
 
 不要在代码的任何出现"< /script>"字符串
 
-```<script>
+    <script>
     function sayScript(){
- 
+
            alert("</script>");
     }
     </script>	
-        //浏览器加载这段代码时会出错，因为按解析嵌入式代码的规则，当遇到"< /script>"字符串时，就会认为那是结束标签。
-        正确的表达方式：alert("</scr"+"ipt>");```
+     //浏览器加载这段代码时会出错，因为按解析嵌入式代码的规则，当遇到"< /script>"字符串时，就会认为那是结束标签。
+     正确的表达方式：alert("</scr"+"ipt>");
     
     
 
