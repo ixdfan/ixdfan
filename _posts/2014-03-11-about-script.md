@@ -42,11 +42,13 @@ share: true
 2. #####使用< script>引入外部JS文件
 
 	用于引入外部文件的< script>标签中间不应该再包含额外的JS代码
+    
 
         <script src="wrap.js"></script>  
         <script src="wrap.js">alert("wrong");</script>这种写法是错误的。  
         <script>标签的src属性可以包含来自外部域的文件  
         <script src="http://www.somewhere.com/afile.js"></script>  
+        
       
     标签中的src属性指向当前HTML页面所在域之外的某个域中的url
 
