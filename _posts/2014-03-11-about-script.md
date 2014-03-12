@@ -1,3 +1,8 @@
+---
+layout: post
+title: < script>标记那些事儿
+---
+
 # < script > 标记的那些事儿
 ###标签位置
 * ####< script >放在< head >中
