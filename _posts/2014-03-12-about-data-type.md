@@ -13,7 +13,7 @@ ECMAScript中有5中基本数据类型——Undefined、Null、 Boolean、 Numbe
 "object"		如果这个值是对象或null
 "function"		如果这个值是函数
 
-###1.数据类型之一 Undefined
+###数据类型之一 Undefined
 
 Undefined类型只有一个值——undefined，引入这个值是为了区分空对象指针和未初始化的变量
 
@@ -23,7 +23,7 @@ Undefined类型只有一个值——undefined，引入这个值是为了区分�
 
 没必要把一个变量的值显示的设为undefined
 
-###2.数据类型之二 Null
+###数据类型之二 Null
 
 Null类型只有一个值——null，null值表示一个空对象指针
 
@@ -31,13 +31,13 @@ Null类型只有一个值——null，null值表示一个空对象指针
 
 alert(null==undefined);返回true
 
-###3.数据类型之三 Boolean
+###数据类型之三 Boolean
 
 Boolean类型值true,false是区分大小写的
 
 要将一个值转换为Boolean值，可调用函数Boolean()
 
-###4.数据类型之四 Number
+###数据类型之四 Number
 
 ####浮点数值
 
@@ -90,7 +90,7 @@ isNaN()确定参数是否“不是数值”
 
 * 析十进制值，没有第二个参数
 
-###5.数据类型之五 String
+###数据类型之五 String
 
 \xnn 以十六进制nn表示一个字符
 
@@ -101,18 +101,20 @@ alert(text.length)  //如果字符串中包含双字节字符，那么length属�
 ####string
 * 返回相应值的字符串 
 
-            var age=11; 
-            var ageAsString=age.toString(); //字符串"11"
+        var age=11; 
+        var ageAsString=age.toString(); //字符串"11"
 
 * null和undefined没有这个方法
 
 * 通过传递基数，toString可以输出以二进制、八进制、十进制、十六进制等有效进制格式的字符串值
-            var num=10;
-            alert(num.toString(2)); //"1010"
-            String
+
+        var num=10;
+        alert(num.toString(2)); //"1010"
+        
+            
 * 不知道转换的值是不是null或undefined的情况下，可以使用String方法，这个函数可以将任何类型的值转换为字符串值
 
-###6.数据类型之六 Object
+###数据类型之六 Object
 
 **Object的每个实例都具有以下方法和属性：**
 
