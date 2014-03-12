@@ -7,9 +7,9 @@ ECMAScript中有5中基本数据类型——Undefined、Null、 Boolean、 Numbe
 
 ##检测数据类型之 typeof
 
-    "undefined" 如果这个值未定义
+    "undefined" 	如果这个值未定义
     "boolean"		如果这个值是布尔值
-    "string"			如果这个值是字符串
+    "string"		如果这个值是字符串
     "number"		如果这个值是数值
     "object"		如果这个值是对象或null
     "function"		如果这个值是函数
