@@ -1,9 +1,13 @@
 ---
 layout: post
-title: < script>标记那些事儿
+title: `<script>`标记那些事儿
+modified: 2013-05-31
+category: articles
+tags: [something about script]
+comments: true
+share: true
 ---
 
-# < script > 标记的那些事儿
 ###标签位置
 * ####< script >放在< head >中
 
