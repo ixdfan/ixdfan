@@ -24,42 +24,41 @@ share: true
 
 ## 嵌入 or 外部文件
 
-#### 使用< script>嵌入JS代码
+1. #### 使用< script>嵌入JS代码
 
-不要在代码的任何出现"< /script>"字符串
+    不要在代码的任何出现"< /script>"字符串
 
-    <script>
-    function sayScript(){
+        <script>
+        function sayScript(){
 
-           alert("</script>");
-    }
-    </script>	
-     //浏览器加载这段代码时会出错，因为按解析嵌入式代码的规则，当遇到"< /script>"字符串时，就会认为那是结束标签。
-     正确的表达方式：alert("</scr"+"ipt>");
+               alert("</script>");
+        }
+        </script>	
+        
+    浏览器加载这段代码时会出错，因为按解析嵌入式代码的规则，当遇到"< /script>"字符串时，就会认为那是结束标签。
+
+    正确的表达方式：alert("</scr"+"ipt>");
     
     
 
-##### 使用< script>引入外部JS文件
+2. ##### 使用< script>引入外部JS文件
 
-用于引入外部文件的< script>标签中间不应该再包含额外的JS代码
-    
+    用于引入外部文件的< script>标签中间不应该再包含额外的JS代码
 
         <script src="wrap.js"></script>  
         <script src="wrap.js">alert("wrong");</script>这种写法是错误的。  
         <script>标签的src属性可以包含来自外部域的文件  
-        <script src="http://www.somewhere.com/afile.js"></script>  
-        
-      
-标签中的src属性指向当前HTML页面所在域之外的某个域中的url
+        <script src="http://www.somewhere.com/afile.js"></script>
 
-注意：
-在访问自己不能控制的服务器上的JS文件时要多加小心，随时可能遇到别人恶意的修改代码。
+    标签中的src属性指向当前HTML页面所在域之外的某个域中的url
 
-== < script>引入外部文件的优点: ==
+    **注意：**在访问自己不能控制的服务器上的JS文件时要多加小心，随时可能遇到别人恶意的修改代码。
 
-** 可维护性**——开发人员可在不触及HTML标签的情况下，集中精力编辑JS代码
+    == < script>引入外部文件的优点: ==
 
-**可缓存**——浏览器可根据具体的设置缓存所有的外部JS文件。如果有两个页面都使用同一个文件，那这个文件只需下载一次，这样能加快页面加载速度。
+    ** 可维护性**——开发人员可在不触及HTML标签的情况下，集中精力编辑JS代码
+
+    **可缓存**——浏览器可根据具体的设置缓存所有的外部JS文件。如果有两个页面都使用同一个文件，那这个文件只需下载一次，这样能加快页面加载速度。
 
 ## 浏览器不支持
 
