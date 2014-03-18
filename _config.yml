@@ -1,5 +1,5 @@
-title:            Front End
-description:      Describe your website here.
+title:            The load of Front-End
+description:      一个前端程序猿的成长之路。。。。。。痛并快乐着
 logo:             site-logo.png
 disqus_shortname: 
 search:           true
@@ -37,7 +37,7 @@ links:
   - title: Articles
     url: /articles/
   - title: About
-    url: /about/
+    url: /articles/
     external: true
 	
 	
