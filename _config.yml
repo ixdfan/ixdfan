@@ -4,7 +4,7 @@ logo:             site-logo.png
 disqus_shortname: 
 search:           true
 # Change url to your domain. Leave localhost server or blank when working locally.
-url:              http://ixdfan.com
+url:              http://ixdfan.github.com
 
 # Owner/author information
 owner:
@@ -33,9 +33,7 @@ bing_verify:
 # For external links add external: true
 links:
   - title: Home
-    url: 
-  - title: Home
-    url: 
+    url: http://ixdfan.com
   - title: Articles
     url: /articles/
   - title: About
