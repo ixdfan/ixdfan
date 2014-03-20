@@ -42,7 +42,7 @@ title: 引用类型之一 Object
     person.name = "me";
     person.age = 20;
     
-##访问对象属性
+## 访问对象属性
 
     alert(person.name);
     alert(person["name"]);//属性必须以字符串的形式放入
