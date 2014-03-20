@@ -8,6 +8,7 @@ title: 引用类型之一 Object
 
 ## 创建Object对象的实例
 ### 字面量方法
+
     var person = {
         name:"Nicholas",//属性名也可以加引号
         age:29//最后一个属性不能加逗号
@@ -36,11 +37,13 @@ title: 引用类型之一 Object
 
 
 ### 构造函数方法
+
     var person = new Object();
     person.name = "me";
     person.age = 20;
     
 ##访问对象属性
+
     alert(person.name);
     alert(person["name"]);//属性必须以字符串的形式放入
     
