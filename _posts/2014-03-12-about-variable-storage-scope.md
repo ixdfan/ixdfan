@@ -10,7 +10,7 @@ title: 变量、作用域和内存问题
 
 指的是那些保存在栈内存中的简单数据段，即这种值完全保存在内存中的一个位置。
 
-基本数据类型：Undefined、Null、Boolean、Number、String。这5种基本数据类型的值在内存中分别占有固定大小的空间，因此可以把他们的值保存在栈内存中，这样提高查询变量的速度。我们操作的是他们实际保存的值，所以他们是按值访问的。
+基本数据类型：Undefined、Null、Boolean、Number、String。这5种基本数据类型的值在内存中分别占有固定大小的空间，因此可以把他们的值保存在栈内存中，**这样提高查询变量的速度**。我们操作的是他们实际保存的值，所以他们是按值访问的。
 
 ####引用类型值
 
@@ -38,21 +38,49 @@ ECMAScript中所有函数的参数都是按值传递。把函数外部的值复�
     var person = new Object();
     setName(person);//person的值复制一份给obj,obj和person指向同一个对象
     alert(person.name); //Nicholas
+    
+在向参数传递基本类型的值时，被传递的值会被复制给一个命名参数。
+
+**在向参数传递一个引用类型的值时，会把这个值在内存中的地址复制给命名参数。**
+
+    function setName(obj){
+        obj.name = "Nicholas";//obj和person指向同一个对象，改变这个对象name属性值
+        obj = new Object();//新建一个对象obj指向这个对象，这里person和obj不再指向同一个对象
+        obj.name = "Greg";//改变新对象的name属性值
+
+    }
+    var person = new Object();新建一个对象，person指向这个对象
+    setName(person);把person中保存的地址值复制一份给obj
+    alert(person.name);//"Nicholas"
 
 5.检测类型
 
-确定一个值是哪种基本类型可使用typeof，确定一个值是哪种引用类型可以使用instanceof
+确定一个值是哪种基本类型可使用typeof，确定一个值是什么类型的对象可以使用instanceof
+
+    alert(person instanceof Object);//变量是不是Object
+    alert(person instanceof Array);//变量是不是Array
+
+所有引用类型值都是Object的实例，因此在检测一个引用类型值和Object构造函数时，instanceof始终返回true。
+
+
+
 
 ##执行环境及作用域
 
-变量对象：每个执行环境都有一个与之关联的变量对象，环境中定义的所有变量和函数都保存在这个对象中。
+变量对象：每个执行环境都有一个与之关联的变量对象，环境中定义的**所有变量和函数都保存在这个对象中**。
 
 在Web浏览器中，全局执行环境被认为是window对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。
 
 当代码在一个环境中执行时，会创建由变量对象构成的一个作用域链。作用域链的用途是保证对执行环境有访问权的所有变量和函数的有序访问。（由局部一层一层到全局）
 
-####延长作用域链
+如果这个执行环境是函数，则将其活动对象作为变量对象，活动对象在最开始时，只包含一个变量即arguments对象。
 
+**每个环境都可以向上搜索作用域链，以查询变量和函数名，但不能向下搜索作用域链**
+
+局部环境开始时会先在自己的变量对象中搜索变量和函数名，如果搜索不到则再搜索上一级作用域
+
+####延长作用域链
+有些语句可以在作用域前端**临时增加一个变量对象**，该变量对象会在代码执行完后被移除。
 #####try-catch语句的catch块
 
 其变量对象中包含的是被抛出的错误对象的声明
@@ -67,7 +95,9 @@ ECMAScript中所有函数的参数都是按值传递。把函数外部的值复�
 
     function buildUrl(){
     var qs="?debug=true";
+    
     with(location){
+    
     var url=href+qs;
     }
     return url;//url被添加到执行环境的变量对象中，所以可以在执行环境中访问url
@@ -75,6 +105,8 @@ ECMAScript中所有函数的参数都是按值传递。把函数外部的值复�
 
     var result=buildUrl();
     alert(result);
+
+接收的是location对象，因此其变了对象中就包含了location对象的所有属性和方法，而这个变量对象被添加到了作用域链的前端。
 
 ####没有块级作用域
 
@@ -99,11 +131,16 @@ JS具有自动垃圾收集机制，也就是说执行环境会负责管理代码
 
 垃圾收集器会按照固定的时间间隔，周期性的释放那些不再继续使用的变量占用的内存。
 
+局部变量只在函数执行的过程中存在，而在这个过程中，会为局部变量在栈或堆内存上分配相应的空间，以便存储他们的值，然后在函数中使用这些变量，直至函数执行结束。
+
 ####标记清除
+
+当变量进入环境比如在函数中声明一个变量时，就将这个变量标记为“进入环境”，而当变量离开环境时，则将其标记为“离开环境”。
 
 垃圾收集器在运行的时候会给存储在内存中的每个变量都加上标记，然后去掉环境中的变量和被环境中变量引用的变量的标记，销毁那些仍带有标记的值并回收他们所占用的内存空间。
 
 ####引用计数
+当声明了一个变量并将一个引用类型值赋给该变量时，这个值的引用次数就是1。如果同一个值又被赋给另一个变量，则该值的引用次数加1。相反，如果包含对这个值引用的变量有取得了另外一个值，则这个值的引用次数减1。当这个值的引用次数变成0时，就可以将其占用的空间回收回来。
 
 跟踪记录每个值被引用的次数。
 
@@ -112,18 +149,28 @@ JS具有自动垃圾收集机制，也就是说执行环境会负责管理代码
 #####循环引用
 
     function problem(){
-    var objectA=new Object();
+    var objectA=new Object();引用1次
     var objectB=new Object();
 
     objectA.someOtherObject = objectB;
-    objectB.someOtherObject = objectA;	
+    objectB.someOtherObject = objectA;//引用2次	
     }
 
 objectA和 objectB通过各自的属性相互引用，这两个对象的引用次数都是2。当函数执行完时，objectA objectB还继续存在，其占用的内存不能被收回
 
 IE中有一部分对象并不是原生JS对象，其BOM和DOM对象就是使用C++以COM对象的形式实现的，而COM对象采用的垃圾收集机制就是引用计数，在IE中只要涉及COM对象，就会存在循环引用的问题
 
+    var element = document.getElmentById("some_element");
+    var myObject = new Object();
+    myObject.element = element;
+    element.someObject = myObject;
+
+在一个DOM元素（element）和原生JS对象（myObject）之间创建了循环引用。变量myObject中有一个element属性指向element对象，而变量element也有叫someObject的属性指向myObject。由于存在这个循环引用，即使将例子中的DOM从页面中移除，它也永远不会被回收。
+
 为了避免类似这样的循环引用问题，最好是在不使用他们的时候手工断开原生Js对象与DOM元素之间的连接。
+
+    myObject.element = null;
+    element.someObject = null;
 
 myObject.element=null;将变量设置为null意味着切断变量与它此前引用的值之间的连接。垃圾收集器下次运行时，就会删除这些值并回收它们所占用的内存。
 
