@@ -1,6 +1,6 @@
 ---
 layout: post
-title:文档类型声明与怪异模式
+title: 文档类型声明与怪异模式
 
 ---
 < !DOCTYPE >声明不是HTML标签，它是指示web浏览器关于页面使用哪个HTML版本进行编写的指令。

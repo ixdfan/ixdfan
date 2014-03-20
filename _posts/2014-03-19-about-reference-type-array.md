@@ -1,6 +1,6 @@
 ---
-layout:post
-title:引用类型之二 Array
+layout: post
+title: 引用类型之二 Array
 
 ---
 数组的每一项都可以保存任何类型的数据。数组的大小是可以动态调整的，可以随着数据的增加自动增长以容纳新数据

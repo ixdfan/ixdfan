@@ -1,6 +1,6 @@
 ---
 layout: post
-title:引用类型之一 Object
+title: 引用类型之一 Object
 ---
 引用类型的值是引用类型的一个实例。
 

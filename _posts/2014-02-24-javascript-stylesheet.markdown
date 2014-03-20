@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: JavaScript 操作样式表
 ---
 

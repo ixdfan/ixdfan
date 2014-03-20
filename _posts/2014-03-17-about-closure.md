@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: 闭包
 ---
 ##什么是闭包
