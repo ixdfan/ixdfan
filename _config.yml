@@ -1,10 +1,10 @@
 title:            The load of Front-End
-description:      һ��ǰ�˳���Գ�ĳɳ�֮·������������ʹ��������
+description:      一个前端程序猿的成长之路。。。。。。痛并快乐着
 logo:             site-logo.png
 disqus_shortname: 
 search:           true
 # Change url to your domain. Leave localhost server or blank when working locally.
-url:              http://ixdfan.github.com
+url:              http://ixdfan.com
 
 # Owner/author information
 owner:
@@ -48,22 +48,3 @@ future:      true
 pygments:    true
 markdown:    kramdown
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
