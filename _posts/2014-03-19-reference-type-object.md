@@ -6,7 +6,7 @@ title: 引用类型之一 Object
 
 引用类型描述的是一类对象所具有的属性和方法。
 
-## 创建Object对象的实例
+## 创建Object对象的实例 
 ### 字面量方法
 
     var person = {
