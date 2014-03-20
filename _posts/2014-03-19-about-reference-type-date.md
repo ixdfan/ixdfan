@@ -1,6 +1,6 @@
 ---
-layout:post
-title:引用类型之三 Date
+layout: post
+title: 引用类型之三 Date
 
 ---
     var now = new Date();//当前时间
