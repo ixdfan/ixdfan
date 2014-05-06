@@ -75,6 +75,15 @@ person1实例有一个constructor属性，该属性指向Person。
 
 * 没有return 语句
 
+### 构造函数返回引用类型
+
+    var obj = new function(){return "abc";};
+    alert(obj);//[Object Object]
+
+	//当构造函数返回值是引用类型时，返回值会覆盖掉新创建的对象
+    var obj = new function(){return new String("abc");}
+    alert(obj);//abc
+
 ### 将构造函数当做函数
 
 构造函数和其他函数唯一的区别是调用他们的方式不同。

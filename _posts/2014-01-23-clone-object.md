@@ -18,12 +18,14 @@ title: 深度克隆
 
     function cloneObj(obj){
     
-        var cloneobj = obj.constructor===Array?[]:{};
-        
-        if(typeof obj!='object'){
+    	 if(typeof obj!='object'){
             return ;
         }
         
+    
+        var cloneobj = obj.constructor===Array?[]:{};
+        
+       
         for(var property in obj){
             if(obj.hasOwnProperty(property)){
             cloneobj[property]=typeof obj[property]==='object'?arguments.callee(obj[property]):obj[property];		}
