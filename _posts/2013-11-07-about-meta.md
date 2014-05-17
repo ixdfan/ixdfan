@@ -1,6 +1,7 @@
 ---
 layout: post
 title: meta 元标记
+category: html
 ---
 元标记meta提供有关页面的元信息，比如针对搜素引擎和更新频度的描述和关键词。
 ##keywords

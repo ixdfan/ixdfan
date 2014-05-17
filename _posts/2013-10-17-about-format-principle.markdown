@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-10-17 05:49:26+00:00
 layout: post
-
+category: interaction design
 title: 认知与设计笔记之格式塔原理
 
 ---

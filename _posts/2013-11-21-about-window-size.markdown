@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-11-21 07:04:58+00:00
 layout: post
-
+category: js
 title: 兼容所有浏览器的当前窗口尺寸
 
 ---

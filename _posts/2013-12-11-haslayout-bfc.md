@@ -1,6 +1,7 @@
 ---
 layout: post
 title: hasLayout和BFC
+category: css
 ---
 ## hasLayout
 

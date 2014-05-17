@@ -1,6 +1,7 @@
 ---
 layout: post
 title: reflow
+category: font-end
 ---
 ## 页面渲染过程
 

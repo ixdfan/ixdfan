@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-11-07 01:15:07+00:00
 layout: post
-
+category: html
 title: 表单元素及相关属性
 
 ---

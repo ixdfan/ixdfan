@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-10-14 15:44:37+00:00
 layout: post
-
+category: interaction design
 title: 认知与设计笔记之一（感知）
 
 ---

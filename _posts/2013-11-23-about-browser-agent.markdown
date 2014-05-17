@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-11-23 09:01:17+00:00
 layout: post
-
+category: js
 title: 兼容所有浏览器的用户代理检测
 
 ---

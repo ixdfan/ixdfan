@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-11-05 06:05:27+00:00
 layout: post
-
+category: interaction design
 title: GUI控件禁忌
 
 ---
