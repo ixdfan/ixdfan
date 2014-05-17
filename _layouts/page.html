@@ -32,16 +32,15 @@
 </div><!-- /.footer-wrapper -->
 
 
-<div id="categories-3" class="left">
-     <h3>Categories</h3>
-     <ul>
-         {% for cat in site.categories %}
-         <li class="cat-item cat-item-6">
-         	<a href="{{ site.baseurl }}/categories/{{ cat[0] }}.html">{{ cat[0] }}</a></li>
-         {% endfor %}
-     </ul>
- </div>
-
+<h4>Category</h4>
+<ul>
+    //这里使用了 Jekyll 语法，会被编译，所以加多个"\"
+    {\% for category in site.categories %\}
+    <li><a href="/categories/{\{ category | first }\}/" title="view all
+posts">{\{ category | first }\} {\{ category | last | size }\}</a>
+    </li>
+    {\% endfor %\}
+</ul>
 
 {% include scripts.html %}          
 
