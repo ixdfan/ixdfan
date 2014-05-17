@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-09-21 13:35:01+00:00
 layout: post
-
+category: interaction design
 title: 什么是交互设计？
 
 ---

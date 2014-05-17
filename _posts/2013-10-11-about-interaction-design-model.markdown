@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-10-11 01:47:44+00:00
 layout: post
-
+category: interaction design
 title: 交互设计-超越人机交互之概念模型
 
 ---

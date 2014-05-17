@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-10-12 15:23:11+00:00
 layout: post
-
+category: interaction design
 title: 你永远不是用户
 
 ---

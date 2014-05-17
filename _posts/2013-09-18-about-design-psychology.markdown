@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-09-18 12:26:28+00:00
 layout: post
-
+category: psychology
 title: 设计心理学笔记（一）
 
 ---
