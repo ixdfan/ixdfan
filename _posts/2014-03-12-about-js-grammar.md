@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JS 语法
-
+category: js
 ---
 
 

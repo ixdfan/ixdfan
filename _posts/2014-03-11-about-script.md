@@ -2,7 +2,7 @@
 layout: post
 title: < script> 标记那些事儿
 modified: 2014-03-12
-category: articles
+category: js
 tags: [something about script]
 comments: true
 share: true

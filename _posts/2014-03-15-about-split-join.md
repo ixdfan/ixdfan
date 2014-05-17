@@ -1,6 +1,7 @@
 ---
 layout: post
 title : split方法和join方法
+category: js
 ---
 
 ## split

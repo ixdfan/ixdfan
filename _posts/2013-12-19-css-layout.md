@@ -1,6 +1,8 @@
 ---
 layout: post
 title: CSS layout
+category: css
+
 ---
 ## Box module
 

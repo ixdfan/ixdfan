@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 常用正则符号
+category: regexp
 ---
 ##限定符
 

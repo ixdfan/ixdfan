@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 引用类型之三 Date
-
+category: js
 ---
     var now = new Date();//当前时间
     var now = new Date(May 25,2014);

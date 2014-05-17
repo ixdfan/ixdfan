@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BOM之navigator对象
+category: js
 ---
 navigator对象的属性通常用于检测显示网页的浏览器类型。
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 字符串相关的方法
+category: js
 ---
 ## 转换为字符串
 

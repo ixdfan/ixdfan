@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 深度克隆
+category: js
 ---
 ## 浅复制
 

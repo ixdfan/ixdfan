@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 客户端检测之怪癖检测
+category: js
 ---
 ##能力检测
 

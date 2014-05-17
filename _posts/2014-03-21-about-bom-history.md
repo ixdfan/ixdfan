@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BOM之history对象
+category: js
 ---
 history对象保存着用户上网的历史记录，从窗口被打开的那一刻算起。
 

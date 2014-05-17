@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2014-02-06 11:30:28+00:00
 layout: post
-
+category: js
 title: for/in循环
 
 

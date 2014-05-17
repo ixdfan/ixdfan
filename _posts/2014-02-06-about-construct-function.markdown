@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2014-02-06 11:44:59+00:00
 layout: post
-
+category: js
 title: 构造函数与类
 
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BOM之window对象
+category: js
 ---
 BOM提供了很多对象，用于访问浏览器的功能，这些内容与任何网页内容无关。
 

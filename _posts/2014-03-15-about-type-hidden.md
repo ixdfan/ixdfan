@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 表单中的type=hidden
+category: js
 ---
 < input type="hidden"/>定义隐藏字段。隐藏字段对于用户是不可见的。隐藏字段通常会存储一个默认值，它们的值也可以由JS进行修改。
 

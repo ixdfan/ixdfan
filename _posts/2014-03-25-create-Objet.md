@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 创建对象
-
+category: js
 ---
 ## 原始方式
 

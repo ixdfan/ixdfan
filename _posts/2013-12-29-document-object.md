@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Document 对象
+category: js
 ---
 
 ## document对象的属性

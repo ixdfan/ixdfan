@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSS-DOM
+category: js
 ---
 
 ##style属性

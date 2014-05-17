@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ECMAScript 中的基本数据类型
+category: js
 ---
 
 ECMAScript中有5中基本数据类型——Undefined、Null、 Boolean、 Number和String，还有一种复杂数据类型——Object。所有值都是上述6中数据类型之一。

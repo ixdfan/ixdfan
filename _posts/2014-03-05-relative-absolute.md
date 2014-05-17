@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 相对/绝对定位详解
+category: css
 ---
 ## 绝对定位
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 操作符
+category: js
 ---
 应用于对象时，相应的操作符通常都会调用对象的valueOf()和toString()方法，以便取得可以操作的值。
 ##递增和递减操作符

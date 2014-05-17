@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 变量、作用域和内存问题
+category: js
 ---
 
 

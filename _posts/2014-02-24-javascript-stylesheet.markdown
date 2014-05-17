@@ -1,6 +1,7 @@
 ---
 layout: post
 title: JavaScript 操作样式表
+category: js
 ---
 
 页面加载时所有外部的和嵌入式的样式表都根据其在文件中出现的位置，按顺序存储在styleSheets数组中，document.styleSheets[0]是第一个样式表。

@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2014-02-08 09:38:01+00:00
 layout: post
-
+category: js
 title: JavaScript中的表单
 
 ---

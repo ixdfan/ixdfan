@@ -1,6 +1,7 @@
 ---
 layout: post
 title: BOM之location对象
+category: js
 ---
 提供与当前窗口中加载的文档有关的信息，还提供一些导航功能。
 

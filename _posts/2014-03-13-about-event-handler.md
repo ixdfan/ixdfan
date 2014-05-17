@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 事件之事件处理程序
+category: js
 ---
 
 ##事件处理程序

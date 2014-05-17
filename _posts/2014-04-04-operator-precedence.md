@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 运算符优先级
+category: js
 ---
 
 |  | 运算符 |描述|

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: vertical-align
+category: css
 ---
 
 ## 可能的值

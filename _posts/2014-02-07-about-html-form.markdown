@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2014-02-07 11:15:58+00:00
 layout: post
-
+category: html
 title: HTML中的表单        
 
 ---

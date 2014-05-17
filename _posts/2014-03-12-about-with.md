@@ -1,6 +1,7 @@
 ---
 layout: post
 title: with 语句
+category: js
 ---
 
 with语句的作用是将代码的作用域设置到一个特定的对象中

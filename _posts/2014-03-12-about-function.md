@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 函数
+category: js
 ---
 
 ###return

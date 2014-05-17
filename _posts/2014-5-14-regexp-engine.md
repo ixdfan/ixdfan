@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 正则引擎
+category: regexp
 ---
 POSIX NFA 和传统型NFA的主要差别
 

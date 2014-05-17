@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 事件之事件流
+category: js
 ---
 事件是用户或浏览器自身执行的某种动作。
 

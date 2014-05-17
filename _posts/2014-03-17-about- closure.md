@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 闭包
+category: js
 ---
 ##什么是闭包
 闭包是有权访问另一个函数作用域中的变量的函数

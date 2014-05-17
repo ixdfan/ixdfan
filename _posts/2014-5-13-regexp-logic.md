@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 正则元素的三种逻辑
+category: regexp
 ---
 
 ### 必须出现
