@@ -3,7 +3,7 @@ author: admin
 comments: true
 date: 2013-09-27 07:19:44+00:00
 layout: post
-category: color
+category: interaction design
 title: 色彩心理学
 
 ---
