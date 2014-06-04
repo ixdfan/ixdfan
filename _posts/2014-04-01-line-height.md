@@ -5,7 +5,7 @@ category: css
 ---
 ## line-height的理解
 
-![行高](../images/o_line_height.png)
+![行高](/images/o_line_height.png)
 
 
 * 行内元素和块级元素都具有line-height属性
