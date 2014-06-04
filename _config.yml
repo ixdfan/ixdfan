@@ -33,13 +33,9 @@ bing_verify:
 # For external links add external: true
 links:
   - title: Home
-<<<<<<< HEAD
-    url: http://ixdfan.com
+    url: 
   - title: Category
     url: /Category/
-=======
-    url: 
->>>>>>> c0d6b419bbb65e3a9b50615198a3ef50a625b77a
   - title: Articles
     url: /articles/
   - title: About
