@@ -13,7 +13,7 @@ image:
 
 <ul class="arc-list">
     {% for post in category.last %}
-        <li style="width:700px;list-style-type:none;border-bottom:1px solid #ccc;line-height:50px"><a href="{{ post.url }}" >{{ post.title }}<span style="float:right">{{ post.date | date:"%d/%m/%Y"}}</span></a></li>
+        <li style="list-style-type:none;border-bottom:1px solid #ccc;line-height:50px"><a href="{{ post.url }}" style="border:none;">{{ post.title }}</a><span style="float:right">{{ post.date | date:"%d/%m/%Y"}}</span></li>
     {% endfor %}
 </ul>
 {% endfor %}
