@@ -9,11 +9,11 @@ image:
   creditlink: http://mademistakes.com
 ---
 {% for category in site.categories %}
-<h2>{{ category | first }}</h2>
-</span>{{ category | last | size }}</span>
+<h2>{{ category | first }}<span>{{ category | last | size }}</span></h2>
+
 <ul class="arc-list">
     {% for post in category.last %}
-        <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.date | date:"%d/%m/%Y"}}</li>
     {% endfor %}
 </ul>
 {% endfor %}
