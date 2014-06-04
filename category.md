@@ -9,7 +9,7 @@ image:
   creditlink: http://mademistakes.com
 ---
 {% for category in site.categories %}
-<h2>{{ category | first }}<span style="margin-left:30px;font-weight:normal">{{ category | last | size }}</span></h2>
+<h2>{{ category | first }}<a style="margin-left:30px;font-weight:normal">{{ category | last | size }}</a></h2>
 
 <ul class="arc-list">
     {% for post in category.last %}
