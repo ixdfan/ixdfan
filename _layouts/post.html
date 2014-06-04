@@ -40,10 +40,10 @@
             <!-- /.social-share -->{% endif %}
 			
 			
-			{% for category in site.categories %}
+			
 
 <ul class="arc-list" style="padding:0;">
-    {% for post in category.last %}
+   {% for category in site.categories %}
         <li style="list-style-type:none;border-bottom:1px solid #ccc;line-height:45px"><a href="{{ post.url }}" style="border:none;">{{ category | first }}</a><span style="float:right">{{ category | last | size }}</span></li>
     {% endfor %}
 </ul>
