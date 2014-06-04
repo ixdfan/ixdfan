@@ -34,12 +34,10 @@ bing_verify:
 links:
   - title: Home
     url: 
-  - title: Category
-    url: /Category/
   - title: Articles
-    url: /articles/
+    url: /Category/
   - title: About
-    url: /articles/
+    url: /about/
     external: true
 
 
