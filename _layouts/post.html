@@ -44,7 +44,7 @@
 <ul>
     
     {% for category in site.categories %}
-    <li><a href="http://ixdfan.com/Category" title="view all
+    <li><a href="http://ixdfan.com/Category/#{{ category | first }}" title="view all
 posts">{{ category | first }} {{ category | last | size }}</a>
     </li>
     {% endfor %}
