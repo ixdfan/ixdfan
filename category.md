@@ -9,11 +9,11 @@ image:
   creditlink: http://mademistakes.com
 ---
 {% for category in site.categories %}
-<h2>{{ category | first }}<a style="margin-left:30px;font-weight:normal">{{ category | last | size }}</a></h2>
+<h2>{{ category | first }}<span style="margin-left:30px;font-weight:normal">{{ category | last | size }}</span></h2>
 
 <ul class="arc-list">
     {% for post in category.last %}
-        <li style="width:700px;list-style-type:none;border-bottom:1px solid #ccc;line-height:50px"><a href="{{ post.url }}" style="text-decoration:none">{{ post.title }}<span style="float:right">{{ post.date | date:"%d/%m/%Y"}}</span></a></li>
+        <li style="width:700px;list-style-type:none;border-bottom:1px solid #ccc;line-height:50px"><a href="{{ post.url }}" >{{ post.title }}<span style="float:right">{{ post.date | date:"%d/%m/%Y"}}</span></a></li>
     {% endfor %}
 </ul>
 {% endfor %}
