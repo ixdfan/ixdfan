@@ -39,6 +39,17 @@
             <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->{% endif %}
 			
+			
+			<h4>Category</h4>
+<ul>
+    
+    {% for category in site.categories %}
+    <li><a href="/categories/{\{ category | first }\}/" title="view all
+posts">{{ category | first }} {{ category | last | size }}</a>
+    </li>
+    {% endfor %}
+</ul>
+			
       </footer>
       <div class="entry-content">
         {{ content }}
