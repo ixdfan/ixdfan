@@ -4,45 +4,6 @@ title: CSS layout
 category: css
 
 ---
-## Box module
-
-元素形成了一个矩形的区域，这个区域就是 CSS 中最基本的布局要素， 常被称作 "box"
-
-每个box都包含一个内容区域、内边距区域、边框区域、外边距区域。
-
-### margin
-
-**有些情况下，margin不起作用：**
-
-* 对于行内非替换元素（例如 SPAN）垂直方向的margin不起作用
-
-* table 类型中 的 TD TR TH 等margin是不起作用的。
-
-
-注：替换元素是指 input 、 img等，元素中没有实际内容，浏览器根据元素的标签和属性来决定元素的具体显示内容，也就是说会把元素属性替换成相应的内容。
-
-#### Collapsing margins
-
-##### 什么时候会发生叠加
-
-普通流中相邻的两个块元素在垂直方向上设置的margin会发生叠加。
-
-##### 常见情况
-
-* 父元素的margin-top和它的第一个子元素的margin-top,父元素的margin-bottom和它的最后一个子元素的margin-bottom。父元素没有加border和padding并且父子元素之间没有非空内容。
-
-* 上一个元素的margin-bottom和下一个元素的margin-top。两个元素都在普通流中，没有float、absolute、inline-block
-
-* 一个没有创建BFC、没有子元素高度为0的元素的margin-top和margin-bottom。
-
-##### 如何避免
-
-* 父子关系中可通过给父元素添加border或者padding
-
-* 兄弟元素中可以通过浮动或者绝对定位其中一个元素
-
-* 但是最好的避免方法是：只给其中一个元素添加垂直外边距
-
 
 ## 框布局
 
@@ -65,7 +26,7 @@ category: css
 
 **display、position、float的相互关系**
 
-![定位关系](../images/display_float_position.png)
+![定位关系](images/display_float_position.png)
 
  "position:absolute" 和 "position:fixed" 优先级最高，有它存在的时候，浮动不起作用，'display' 的值也需要调整；
  
@@ -101,7 +62,7 @@ category: css
 
 ### 怎么找一个元素的包含块
 
-![包含块判定](../images/Containblock.png)
+![包含块判定](/images/Containblock.png)
 
 
 #### 静态或相对定位元素的包含块
@@ -116,7 +77,7 @@ position值为static或relative的元素，它的包含块由它最近的块级�
 
 如果 'direction' 是 'ltr'，包含块的顶、左边是祖先元素生成的第一个框的顶、左内边距边界(padding edges) ，右、下边是祖先元素生成的最后一个框的右、下内边距边界(padding edges) 
 
-![绝对定位元素的包含块](../images/CBabsolute.png)
+![绝对定位元素的包含块](/images/CBabsolute.png)
 
 行内元素内形成的包含块，在各浏览器中各不相同，存在兼容性问题。
 
@@ -226,13 +187,13 @@ position值为static或relative的元素，它的包含块由它最近的块级�
 
 ### 行框（line boxes）
 
-![行框](../images/scope_line_box.png)
+![行框](/images/scope_line_box.png)
 
 通常，行框的左右边接触到其包含块的左右边，但是浮动元素可能处于包含块边缘和行框边缘之间。
 
 同一行内格式化上下文中的行框通常高度不一样，如一行包含了高的图形。
 
-![行框](../images/line_box.png)
+![行框](/images/line_box.png)
 
 
 #### 行内框在行框中的对齐
@@ -241,7 +202,7 @@ position值为static或relative的元素，它的包含块由它最近的块级�
 
 行内框在行框中垂直方向上的对齐取决于vertical-align特性，默认为baseline对齐
 
-![行内框垂直对齐](../images/line_box_align.png)
+![行内框垂直对齐](/images/line_box_align.png)
 
 vertical-align = "top",行内框顶端与行中最高元素的顶外边界对齐。
 
@@ -249,13 +210,13 @@ vertical-align = "top",行内框顶端与行中最高元素的顶外边界对齐
 
 行内框宽度总和小于包含他们的行框的宽，他们在水平方向上的对齐，取决于text-align特性。
 
-![行内框水平对齐](../images/inline_box_horizontal_align.png)
+![行内框水平对齐](/images/inline_box_horizontal_align.png)
 
 text-align="center",行内框在行框中居中对齐
 
 行内框超出包含它的行框的宽度，它会被分割成几个框，并且这些框会被分布到几个行框内
 
-![行内框宽度超过行框](../images/inline_box_break.png)
+![行内框宽度超过行框](/images/inline_box_break.png)
 
 
 
