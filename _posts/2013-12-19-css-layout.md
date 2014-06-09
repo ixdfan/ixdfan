@@ -26,7 +26,7 @@ category: css
 
 **display、position、float的相互关系**
 
-![定位关系](images/display_float_position.png)
+![定位关系](/images/display_float_position.png)
 
  "position:absolute" 和 "position:fixed" 优先级最高，有它存在的时候，浮动不起作用，'display' 的值也需要调整；
  
@@ -54,34 +54,6 @@ category: css
 一个框整个地从常规流中脱离（它对后续的兄弟元素没有影响），并根据它的包含块来分配其位置。
 
 
-## Containing block
-
-### 为什么要理解包含块
-
-宽度高度自动值的计算、浮动元素定位、绝对定位元素的定位等都跟包含块有关。
-
-### 怎么找一个元素的包含块
-
-![包含块判定](/images/Containblock.png)
-
-
-#### 静态或相对定位元素的包含块
-
-position值为static或relative的元素，它的包含块由它最近的块级、单元格或者行内块祖先元素的**内容框**创建。
-
-#### 绝对定位元素的包含块
-
-绝对定位元素的包含块由离他最近的position属性为absolute、relative或者fixed的祖先元素创建。
-
-如果其祖先元素是行内元素，则包含块取决于其祖先元素的"direction"属性
-
-如果 'direction' 是 'ltr'，包含块的顶、左边是祖先元素生成的第一个框的顶、左内边距边界(padding edges) ，右、下边是祖先元素生成的最后一个框的右、下内边距边界(padding edges) 
-
-![绝对定位元素的包含块](/images/CBabsolute.png)
-
-行内元素内形成的包含块，在各浏览器中各不相同，存在兼容性问题。
-
-**如果祖先元素不是行内元素，那么包含块的区域是祖先元素的内边距边界**
 
 ## 层叠
 
@@ -145,78 +117,6 @@ position值为static或relative的元素，它的包含块由它最近的块级�
 5.加了 '!important' 的用户声明( user important declarations )
 
 
-## Formatting context
-
-格式化上下文指的是初始化元素定义的环境。
-
-上下文定义了元素所处的环境，格式化表明元素处于此环境中应当被初始化。
-
-### Block formatting context
-
-在块格式化上下文中，框一个接一个的被垂直放置，他们的起点是一个包含块的顶部。
-
-
-
-###触发方式
-
-* 浮动元素
-
-* 绝对定位元素
-
-* 行内块元素
-
-* 单元格
- 
-* 表格标题元素
-
-* overflow非visible的元素
-
-这些元素会创建新的块格式化上下文
-
-### 特性
-
-* 可以包含浮动元素
-
-* 可以阻止外边距折叠
-
-* 可以阻止元素被浮动元素覆盖
-
-### Inline formatting context
-
-行格式化上下文中，框一个接一个的水平排列，起点是包含块的顶部。
-
-### 行框（line boxes）
-
-![行框](/images/scope_line_box.png)
-
-通常，行框的左右边接触到其包含块的左右边，但是浮动元素可能处于包含块边缘和行框边缘之间。
-
-同一行内格式化上下文中的行框通常高度不一样，如一行包含了高的图形。
-
-![行框](/images/line_box.png)
-
-
-#### 行内框在行框中的对齐
-
-##### 垂直方向上的对齐
-
-行内框在行框中垂直方向上的对齐取决于vertical-align特性，默认为baseline对齐
-
-![行内框垂直对齐](/images/line_box_align.png)
-
-vertical-align = "top",行内框顶端与行中最高元素的顶外边界对齐。
-
-##### 水平方向上的对齐
-
-行内框宽度总和小于包含他们的行框的宽，他们在水平方向上的对齐，取决于text-align特性。
-
-![行内框水平对齐](/images/inline_box_horizontal_align.png)
-
-text-align="center",行内框在行框中居中对齐
-
-行内框超出包含它的行框的宽度，它会被分割成几个框，并且这些框会被分布到几个行框内
-
-![行内框宽度超过行框](/images/inline_box_break.png)
 
 
 
