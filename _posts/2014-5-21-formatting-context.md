@@ -12,7 +12,7 @@ category: css
 
 ### Block formatting context
 
-在块格式化上下文中，框一个接一个的被垂直放置，他们的起点是一个包含块的顶部。
+在块格式化上下文中，框一个接一个的被垂直放置，他们的起点是一个[包含块](http://ixdfan.com/css/2014/05/20/containing-block.html)的顶部。
 
 
 
