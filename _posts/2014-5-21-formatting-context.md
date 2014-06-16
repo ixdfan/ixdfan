@@ -28,7 +28,7 @@ category: css
  
 * 表格标题元素
 
-* overflow非visible的元素
+* overflow非visible的元素(用overflow清除浮动的原理)
 
 这些元素会创建新的块格式化上下文
 
