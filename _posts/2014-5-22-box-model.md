@@ -9,7 +9,7 @@ category: css
 
 每个box都包含一个内容区域、内边距区域、边框区域、外边距区域。
 
-![boxmodel](/images/boxmodel.gif)
+![boxmodel](/images/box-model.png)
 
 
 ### margin
