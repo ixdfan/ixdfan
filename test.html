@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+	<script>
+		var xhr = new XMLHttpRequest();
+		var url = "http://fed.hz.netease.com/api/getblogs";
+		xhr.open("GET",url,true);
+		xhr.onreadystatechange = sug;
+		xhr.send(null);
+		function sug(response){
+			console.log(response);
+		}
+		var script = document.createElement("script");
+		script.src = "http://suggestion.baidu.com/su?wd=设计&p=3&cb=sug";
+		document.body.insertBefore(script,document.body.firstChild);
+		alert(document.domain)
+	</script>
+</body>
+</html>
