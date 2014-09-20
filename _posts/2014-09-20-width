@@ -1,0 +1,38 @@
+---
+layout: post
+title: width属性详解
+category: html
+---
+### width
+
+* width对行内元素不起作用
+
+* 块元素不设置宽度时默认为width:auto
+
+
+#### 浮动和绝对定位元素
+
+1.width:auto会将浮动和绝对定位元素收缩到与内容相等的宽度
+
+    
+2.绝对定位元素，left和right设为0、width:auto时,会把元素拉伸到与包含块元素相等的宽度
+
+	div{position:absolute;left:0;right:0;}
+
+#### 块元素
+
+1.width:auto会将块元素拉伸到与父级元素相等的宽度
+
+2.width:auto和width:100%的区别
+
+* 都会将块元素拉伸到与父元素相等宽度
+
+* width:100%,如果元素设置了边框和内外边距就会溢出父元素
+
+* width:auto,元素设置了边框和内外边距也不会溢出，因为width：auto是元素的边框和内外边距和宽度之和等于父元素宽度
+
+* 表格元素，width:100%的计算和width:auto相同，即使设置了边框和内外边距也不会溢出
+
+#### width:100em
+
+将元素宽度设置为font-size的高度相对值
