@@ -1,0 +1,80 @@
+---
+layout: post
+title: font-size 详解
+category: css
+---
+## font-size 常用单位
+
+### 相对长度单位
+
+* em 相对于父元素的字体大小
+
+* ex 相对于特定字体中x的大小
+
+* px 相对于特定设备的分辨率
+
+### 绝对长度单位
+
+绝对长度单位仅在打印时，或在浏览器/设备的物理尺寸和特性已知的情况下才比较有用
+
+* in 英寸
+
+* cm 厘米
+
+* mm 毫米
+
+* pt 1pt=1/72英寸
+
+### 百分比值
+
+* % 相对于父元素
+
+### 相对大小关键字
+
+相对大小关键字的值，相对于父元素当前的设定值
+
+* larger 
+
+* smaller
+
+### 绝对大小关键字
+
+绝对大小关键字对应的字体大小由浏览器或设备决定。
+
+* xx-small
+
+* x-small
+
+* small
+
+* medium
+
+* large
+
+* x-large
+
+* xx-large
+
+W3C建议两个相邻关键字之间的比例设为1.5，如large是medium的1.5倍
+
+** 浏览器中所有大小概念，都是基于屏幕分辨率的，文字、图片、表格等都会随着屏幕分辨率变化而变化。 **
+
+## font-size的继承性
+
+	body{font-size:12px}//给body设置字体大小为12px，网页中所有文字都会继承这个大小都为12px,但是有的标签有默认文字大小会覆盖掉这个继承来的字体大小。
+
+
+
+## 默认有font-size值的元素
+
+	button,input,textarea font-size:10pt
+
+	h1 font-size:24pt|2em;
+
+	h2,h3,h4,h5,h6都有不同的默认字体大小
+
+	optgroup,option font-size:10pt;
+
+	select font-size:10pt
+
+默认有字体大小的标签，需要在标签上设定字体大小
