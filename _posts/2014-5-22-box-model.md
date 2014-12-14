@@ -65,7 +65,39 @@ category: css
 
 * 兄弟元素中可以通过浮动或者绝对定位其中一个元素
 
-* 但是最好的避免方法是：只给其中一个元素添加垂直外边距
+* 能用padding的地方，尽量用padding代替margin
+
+### negative margin
+
+html:
+
+	<div class="img">
+		<img src="bio-photo.jpg" alt="">
+	</div>
+    
+css:
+
+	.img{
+		background:url(shadow.gif) no-repeat bottom right;
+		float:left;
+		clear:right;
+		margin:100px;
+		border:1px solid red;
+	}
+	.img img{
+		display:block;/*解决img标签底部3px留白问题*/
+		border:1px solid #a9a9a9;
+		padding:4px;
+		margin:-20px 5px 5px -20px;
+        position:relative;/*解决IE6中默认隐藏负margin部分问题*/
+	}
+    
+![ie-negative-margin](/images/ie-negative-margin.png)
+IE6下默认隐藏负margin部分的效果
+    
+![negative-margin](/images/negative-margin.png)
+**父元素的宽高自适应，父元素的宽高不包含子元素的负margin值部分，负margin值部分溢出父元素。**
+
 
 ### width
 
