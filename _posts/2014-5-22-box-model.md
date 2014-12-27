@@ -93,9 +93,11 @@ css:
 	}
     
 ![ie-negative-margin](/images/ie-negative-margin.png)
+
 IE6下默认隐藏负margin部分的效果
     
 ![negative-margin](/images/negative-margin.png)
+
 **父元素的宽高自适应，父元素的宽高不包含子元素的负margin值部分，负margin值部分溢出父元素。**
 
 

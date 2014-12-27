@@ -140,6 +140,37 @@ float也会让元素inline-block化，对行内元素应用了浮动定位，它
 
 通过设置margin负值元素的position属性值为relative来解决这个bug
 
+html:
+
+	<div class="img">
+		<img src="bio-photo.jpg" alt="">
+	</div>
+    
+css:
+
+	.img{
+		background:url(shadow.gif) no-repeat bottom right;
+		float:left;
+		clear:right;
+		margin:100px;
+		border:1px solid red;
+	}
+	.img img{
+		display:block;/*解决img标签底部3px留白问题*/
+		border:1px solid #a9a9a9;
+		padding:4px;
+		margin:-20px 5px 5px -20px;
+        position:relative;/*解决IE6中默认隐藏负margin部分问题*/
+	}
+    
+![ie-negative-margin](/images/ie-negative-margin.png)
+
+IE6下默认隐藏负margin部分的效果
+    
+![negative-margin](/images/negative-margin.png)
+
+其他浏览器效果
+
 #### 把相对定位元素用在合适的标签上
 
 在需要设置一个相对定位元素来限制绝对定位时，不要把相对定位设置在最外层父标签上，在绝对定位元素外套一层标签专门用于设置相对定位，这样具有更好的可扩展性。
@@ -157,6 +188,49 @@ float也会让元素inline-block化，对行内元素应用了浮动定位，它
 z-index 只有在position不是static的情况下才有作用。
 
 如果元素A要在元素B之上显示，那么先设置B的position属性，再设置A的position属性就可以了，不用再设置两者的z-index.
+
+### z-index为负值
+
+将元素的z-index设置为负值，给元素设置监听事件时会出问题。
+
+z-index为负值的元素，位于z-index为0的body之下，被透明的body挡住了，以至于不能触发事件。
+
+### flash
+
+flash插入网页中，如果和其他元素有重叠，无论怎么设置z-index，Flash都浮在其他元素之上。
+
+这是因为浏览器解析页面时，会先判断元素的类型，如果是窗口类型的，会优先于非窗口类型的元素显示在页面最顶端，如果同属非窗口类型的，才会去判断z-index的大小。
+
+flash嵌入网页中，有个`wmode`属性，用于指定窗口模式，其值有：window（窗口）、opaque(非窗口不透明)、transparent(非窗口透明)。默认为wmode的值为window，其Z轴优先级高于所有非窗口类型元素
+
+	<object width="640" height="90" type="application/x-shockwave-Flash">
+    	<param name="movie" value="xxx.swf"></param>
+        <param name="wmode" value="opaque"></param>
+        <embed width="640" height="90" wmode="opaque" type="application/x-shockwave-Flash" src="xxx.swf"></embed>
+    </object>
+
+
+### IE6下select元素
+
+IE6下select元素也是以窗口形式显示的。
+
+IE6下select会浮在定位元素之上,增加一个放在select上面其他元素下面的iframe来解决
+
+HTML：
+
+	<select>
+    	<option>请选择</option>
+    </select>
+    <div class="test"></div>
+    <iframe id="mask" frameborder="0" scrolling="no"></iframe>
+    
+CSS：
+
+	.test{width:200px;height:200px;background:green;position:absolute;left:50px;top:10px;z-index:5;}
+    #mask{width:200px;height:200px;position:absolute;left:50px;top:10px;z-index:4;}
+
+
+
 
 
 
