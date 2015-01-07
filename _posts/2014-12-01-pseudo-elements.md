@@ -2,6 +2,7 @@
 layout: post
 title: 伪元素与伪类
 category: CSS
+description:伪类主要用于向某些选择器添加特殊效果
 ---
 ## 伪类
 
