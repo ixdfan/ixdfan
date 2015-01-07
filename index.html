@@ -6,13 +6,13 @@ tags: [Jekyll, theme, themes, responsive, blog, minimalism]
 ---
 
 
-<div>
+
 <ul class="post-list">
 {% for post in site.posts limit:10 %} 
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
 {% endfor %}
 </ul>
-<footer class="entry-meta">
+<div class="entry-meta">
         <img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
         <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="icon-calendar-empty"></i> {{ page.date | date: "%B %d, %Y" }}</time></span>
@@ -39,8 +39,8 @@ tags: [Jekyll, theme, themes, responsive, blog, minimalism]
 	{% endfor %}
 	</ul>
 			
-  </footer>
-</div>
+  </div>
+
 
 
 
