@@ -23,6 +23,15 @@
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
   </article>
+  <h4>Category</h4>
+	<ul>
+		    
+	 {% for category in site.categories %}
+    		<li><a href="http://ixdfan.github.com/Category/#{{ category | first }}" title="view all
+			posts">{{ category | first }} {{ category | last | size }}</a>
+    		</li>
+	{% endfor %}
+	</ul>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
