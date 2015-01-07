@@ -13,10 +13,10 @@ tags: [Jekyll, theme, themes, responsive, blog, minimalism]
   	<article>
   		<a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a>
   		<div style="font-size:14px;">	
-	  		{% if post.shortinfo %}
-	                	{{ post.shortinfo }}
-	            	{% elsif post.description %}
+	  		{% if post.description %}
 	                	{{ post.description }}
+	            	{% elsif post.shortinfo %}
+	                	{{ post.shortinfo }}
 	            	{% else %}
 	                	{{ post.excerpt }}
 	            	{% endif %}
