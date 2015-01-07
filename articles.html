@@ -10,12 +10,14 @@ description: "An archive of posts sorted by date."
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
 {% endfor %}
 </ul>
-<h4>Category</h4>
-<ul>
-	    
- {% for category in site.categories %}
-  		<li><a href="http://ixdfan.github.com/Category/#{{ category | first }}" title="view all
-		posts">{{ category | first }} {{ category | last | size }}</a>
-  		</li>
-{% endfor %}
-</ul>
+<div class="post-category">
+	<h4>Category</h4>
+	<ul>
+		    
+	 {% for category in site.categories %}
+	  		<li><a href="http://ixdfan.github.com/Category/#{{ category | first }}" title="view all
+			posts">{{ category | first }} {{ category | last | size }}</a>
+	  		</li>
+	{% endfor %}
+	</ul>
+</div>
