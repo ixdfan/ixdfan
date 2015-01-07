@@ -24,7 +24,7 @@
     </div><!-- /.entry-wrapper -->
    </article>
 </div><!-- /#main -->
-<footer class="entry-meta">
+<div class="entry-meta">
         <img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
         <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="icon-calendar-empty"></i> {{ page.date | date: "%B %d, %Y" }}</time></span>
@@ -51,7 +51,7 @@
 	{% endfor %}
 	</ul>
 			
-      </footer>
+</div>
 <div class="footer-wrapper">
   <footer role="contentinfo">
     {% include footer.html %}
