@@ -6,13 +6,15 @@ category: js
 数组的每一项都可以保存任何类型的数据。数组的大小是可以动态调整的，可以随着数据的增加自动增长以容纳新数据
 
 ##创建数组
-### 使用构造函数
+### 1.使用构造函数
+
     var colors = new Array();
     var colors = new Array("res",10,true);
+    var colors = new Array(10);//只传入一个参数用来指定数组的长度
 
 也可以省略new操作符
 
-###字面量方法
+### 2.字面量方法
 
     var colors = [,,];//创建一个包含2或3项的数组
     
@@ -23,7 +25,15 @@ IE的ECMAScript实现在数组字面量方面存在bug，导致这个数组包�
 
 在使用字面量方法创建数组时，不会调用Array()构造函数（Firefox除外）
 
-### 数组项数
+### 3.字符串生成数组
+
+调用字符串对象的`split()`方法也可以生成数组
+
+	var str = 'a b c';
+    var arr = str.split(' ');
+    print(arr)//[a,b,c]
+
+## 数组项数
 数组的项数保存在其length属性中，这个属性始终会返回0或更大值
 
 数组的length属性，不是只读的，通过设置这个属性可以从数组的末尾添加或移除项。
@@ -48,8 +58,10 @@ IE的ECMAScript实现在数组字面量方面存在bug，导致这个数组包�
     
 该数组从位置3到位置98的每一项都获得undefined
 
-##转换方法
-###toLocalString() toString() valueOf()
+##操作方法
+
+###1.转换方法
+####toLocalString() toString() valueOf()
 
 调用数组的**toString()**和**valueOf()**方法会返回相同的值，即由数组中的每个值的字符串形式拼接而成的一个以逗号分隔的**字符串**。
 
@@ -62,7 +74,7 @@ IE的ECMAScript实现在数组字面量方面存在bug，导致这个数组包�
     
 由于alert要接收字符串参数，所以她会在后台调用toString()方法，由此会得到与直接调用toString()方法相同的结果。
 
-### join()
+#### join()
 只接受一个参数，即用作分隔符的字符串，然后返回包含所有数组项的字符串。
 
     var colors = ["red","blue","green"];
@@ -73,15 +85,18 @@ IE的ECMAScript实现在数组字面量方面存在bug，导致这个数组包�
 
 如果数组中的某一项是null或undefined，那么该值在join()、toString()、toLocalString()、valueOf()方法返回的结果中以空字符串表示
 
-##栈方法
+###2.增删操作
+
+#### 栈方法
+
 栈是一种LIFO（last in first out）的数据结构，也就是最新添加的项最早被移除
 
 栈中的插入和移除只会发生在栈的顶部
 
-###push()
+#####push()
 接收任意数量的参数，把他们逐个添加到数组末尾，并**返回修改后数组的长度**
 
-### pop()
+##### pop()
 从数组末尾移除最后一项，减少数组的length值，并**返回移除的项**
 
     var colors = new Array();
@@ -96,14 +111,13 @@ IE的ECMAScript实现在数组字面量方面存在bug，导致这个数组包�
 
     alert(colors.length);//2 修改后数组的长度
     
-##队列方法
+####队列方法
 队列数组结构的访问规则是FIFO（first in first out）
 
-
-###shift()
+####shift()
 移除数组中的**第一项并返回移除的项**，同时数组的长度减1
 
-### unshift()
+#### unshift()
 
 在数组**前端添加**任意项并**返回新数组的长度**
 
@@ -117,15 +131,25 @@ IE的ECMAScript实现在数组字面量方面存在bug，导致这个数组包�
 
 IE中unshift()总是返回undefined而不是数组想新长度。
 
-##重排序方法
-### reverse()
+#### 任意位置增删元素
+
+##### splice()
+
+接收三个参数：起始索引、需要删除的元素个数、要添加进数组的元素
+
+	var nums = [1,2,3,4,5];
+    nums.splice(1,1,6,7);//在nums数组的位置1处删除一个元素，并且插入元素6,7
+    print(nums);//[1,6,7,3,4,5]
+
+###重排序方法
+#### reverse()
 反转数组项的顺序
 
     var values = [1,2,3,4,5];
     values.reverse();
     alert(values);//5,4,3,2,1
     
-### sort()
+#### sort()
 按升序排列数组项
 
 sort()方法会调用每个数组项的toString()转型方法，然后比较得到的字符串，以确定如何排序。即使数组中每一项都是数值，sort()方法比较的也是字符串
@@ -158,9 +182,9 @@ reverse()和 sort()方法的返回值是经过排序后的数组
         return value2 - value1;
     }
 
-##操作方法
+###针对数组元素的操作
 **concat()和slice()不会改变原数组，splice()会改变原数组**
-###concat()
+####concat()
 先创建当前数组的一个副本，然后将接收到的参数添加到这个副本的末尾，最后返回新数组。
 
 不传参时，他只是复制当前数组并返回副本
@@ -174,7 +198,7 @@ reverse()和 sort()方法的返回值是经过排序后的数组
 
 
 
-###slice()
+####slice()
 基于当前数组的一项或多个项创建一个新数组
 
 接收一或两个参数，即要返回的项的起始和结束位置。
@@ -190,13 +214,13 @@ reverse()和 sort()方法的返回值是经过排序后的数组
     alert(colors);//red,blue,green,black
     alert(colors2);//blue,green,black
 
-###splice()
+####splice()
 返回一个数组，该数组包含从原始数组中删除的项。
-####删除
+#####删除
 可以删除任意数量的项，只需指定两个参数，要删除的第一项的位置和要删除的项数。
-####插入
+#####插入
 可以向指定位置插入任意数量的项，只需指定三个参数，起始位置、0（要删除的项数）和要插入的项
-####替换
+#####替换
 可以向指定位置插入任意数量的项，并且同时删除任意数量的项，只需指定三个参数，起始位置、要删除的项数和要插入的任意数量的项。
 
 第一个参数为负值，则加上数组长度，第二个参数为负数则不删除任何项。
@@ -213,4 +237,107 @@ alert(removed);//返回一个空数组
 removed = colors.splice(1,1,"red","purple");//插入两项，删除一项
 alert(colors);//blue,red,purple,orange,green
 alert(removed);//yellow
+
+#### 复制数组
+
+把一个数组赋值给另一个数组时，只是为被赋值的数组增加了一个引用。
+
+	var nums = [1,2,3];
+    var nums2 = nums;
+    nums[0] = 4;
+    print(nums2[0]);//4
+    
+这种行为被称为浅复制，新数组依然指向原来的数组
+
+要执行深复制，需将原数组中的每一个元素都复制一份到新数组中。
+
+	function copy(arr,arr2){
+    	for(var i=0; i<arr.length; i++){
+        	arr2[i] = arr[i];
+        }
+    }
+
+### 查找元素
+
+以下两个方法都接收两个参数：要查找的项、表示查找起点位置的索引。比较第一个参数与数组中的每一项时，会使用全等操作符。
+
+IE9以下浏览器不支持
+
+#### indexOf()
+
+用来查找传进来的参数在数组中是否存在，如存在返回该元素在数组中的索引，如不存在返回-1
+
+#### lastIndexOf()
+
+与indexOf类似，只是这个函数是从右往左查找
+
+### 迭代方法
+
+IE9以下IE浏览器不支持迭代方法
+
+`map()`和`filter()`方法可以产生新数组
+
+#### every()
+
+接收一个返回值为布尔类型的函数，对数组中的每一项使用该函数
+
+对数组中的每一项运行给定函数，如果该函数对每一项都返回true,则返回true
+
+	function isEven(num){
+    	return num % 2 == 0;
+    }
+    var nums = [2,4,6];
+    var even = nums.every(isEven);//true  对数组中的每一项使用isEven函数都返回true
+#### some()
+
+接收一个返回值为布尔类型的函数，只要有一个元素使得该函数返回true，该方法就返回true
+
+	var nums = [1,3,4];
+    var even = nums.some(isEven);//true
+
+#### forEach()
+
+接收一个函数，对数组中的每个元素使用该函数
+
+	function square(num){
+    	print(num, num*num);
+    }
+    var nums = [1,2,3];
+    nums.forEach(square);1 1   2 4   3 9
+    
+#### map()
+
+对数组中每一个元素使用某个函数，返回一个新数组
+
+	function sum(n){
+    	return n += 1;
+    }
+    var nums = [1,2,3];
+    var news = nums.map(sum);
+    print(news);//[2,3,4]
+    
+#### filter()
+
+传入一个返回值为布尔类型的函数，返回一个新数组，该数组包含应用该函数结果为true的元素
+
+	var nums = [1,2,3];
+    var news = nums.filter(isEven);
+    print(news);//[2]
+    
+#### reduce()
+
+接收一个函数，返回一个值。从一个累加值开始不断对累加值和数组中的后续元素调用该函数，返回得到的累加值
+
+	function add(a,b){
+    	return a + b ;
+    }
+	
+    var nums = [1,2,3];
+    var sum = nums.reduce(add);
+    print(sum);//6
+    
+reduce()也可以用来将数组中的元素连接成一个长的字符串
+
+`reduceRight()`是从右到左执行
+
 
