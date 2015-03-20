@@ -40,15 +40,15 @@
             <!-- /.social-share -->{% endif %}
 			
 			
-			<h4>Category</h4>
-<ul>
-    
-    {% for category in site.categories %}
-    <li><a href="http://ixdfan.com/Category/#{{ category | first }}" title="view all
-posts">{{ category | first }} {{ category | last | size }}</a>
-    </li>
-    {% endfor %}
-</ul>
+	<h4>Category</h4>
+	<ul>
+		    
+	 {% for category in site.categories %}
+    		<li><a href="http://ixdfan.github.com/Category/#{{ category | first }}" title="view all
+			posts">{{ category | first }} {{ category | last | size }}</a>
+    		</li>
+	{% endfor %}
+	</ul>
 			
       </footer>
       <div class="entry-content">

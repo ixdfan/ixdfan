@@ -5,8 +5,30 @@ description: "A simple and clean responsive Jekyll theme for words and photos."
 tags: [Jekyll, theme, themes, responsive, blog, minimalism]
 ---
 
+
+
 <ul class="post-list">
 {% for post in site.posts limit:10 %} 
-  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
+  <li>
+  	<article>
+  		<a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a>
+  	</article>
+  </li>
 {% endfor %}
 </ul>
+<div class="post-category" style="position:fixed;left:50px;top:250px;font-size:12px;">
+	<h4>Category</h4>
+	<ul>
+		    
+	 {% for category in site.categories %}
+	  		<li><a href="http://ixdfan.github.com/Category/#{{ category | first }}" title="view all
+			posts">{{ category | first }} {{ category | last | size }}</a>
+	  		</li>
+	{% endfor %}
+	</ul>
+</div>
+
+
+
+
+
