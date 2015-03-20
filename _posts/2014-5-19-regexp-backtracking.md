@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 回溯
+category: regexp
 ---
 回溯是NFA最重要的性质
 
