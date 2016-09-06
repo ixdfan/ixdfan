@@ -1,3 +1,8 @@
+---
+layout: post
+title: withCredentails
+category: js
+---
 ## withCredentials
 
 了解withCredentials之前，需要先了解同源策略和CORS(Cross-Origin Resource Sharing)。
