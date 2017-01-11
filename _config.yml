@@ -48,3 +48,5 @@ pygments:    true
 #markdown:    kramdown
 markdown:    rdiscount
 
+
+theme: jekyll-theme-cayman
